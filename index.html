@@ -6,7 +6,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Homework 6</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -423,6 +423,51 @@
             <use href="./images/sprite.svg#cross" />
           </svg>
         </button>
+
+        <div class="modal__form">
+          <h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>
+          <form class="form" action="#">
+            <label class="form__item">
+              Телефон
+              <input
+                class="form__input"
+                type="tel"
+                name="phone"
+                id="phone"
+                required
+              />
+            </label>
+
+            <label class="form__item">
+              Пошта
+              <input
+                class="form__input"
+                type="email"
+                name="email"
+                id="email"
+                required
+              />
+            </label>
+
+            <label class="form__item form__item--textarea">
+              Коментар
+              <textarea
+                class="form__text-area"
+                name="comment"
+                id="comment"
+                placeholder="Введіть текст"
+              ></textarea>
+            </label>
+
+            <label class="form__item form__item--checkbox">
+              <input type="checkbox" name="checkbox" id="checkbox" />
+              Погоджуюся з розсилкою та приймаю
+              <a class="checkbox-link" href="#">Умови договору</a>
+            </label>
+
+            <button class="form__button" type="submit">Відправити</button>
+          </form>
+        </div>
       </div>
     </div>
   </body>

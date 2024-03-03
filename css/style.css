@@ -89,6 +89,23 @@ a {
   transition: all 0.3s ease;
 }
 
+.is-active {
+  position: relative;
+}
+
+.is-active::after {
+  display: block;
+  content: "";
+  height: 4px;
+
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+
+  background-color: #2196f3;
+  border-radius: 2px;
+}
+
 .nav__link:hover {
   color: #2196f3;
   font-weight: 500;
@@ -670,7 +687,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  
+
   background-color: #00000080;
   transition: all 0.3s ease;
 
@@ -683,6 +700,7 @@ a {
 }
 
 .modal__window {
+  padding: 40px;
   width: 528px;
   height: 580px;
   top: 50%;
@@ -725,8 +743,125 @@ a {
 .modal__cross {
   height: 11px;
   width: 11px;
+  transition: color 0.3s linear;
+}
+
+.modal__button:hover .modal__cross {
+  color: #2196f3;
 }
 
 main:has(.modal--is-open) {
   overflow: hidden;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  color: #212121;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__item {
+  margin: 0 0 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  width: 100%;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.form__item--textarea {
+  margin: 0 0 20px;
+}
+
+.form__item--checkbox {
+  margin: 0 0 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__icon {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  padding: 2px;
+
+  left: 11px;
+  bottom: 11px;
+
+  transition: color 0.3s ease;
+}
+
+.form__input {
+  padding: 0 0 0 42px;
+  border-radius: 4px;
+  border: 1px solid #21212133;
+  height: 40px;
+  transition: color 0.3s linear;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.form__input:hover,
+.form__input:focus,
+.form__text-area:focus {
+  border-color: #2196f3;
+  outline: 1px solid #2196f3;
+}
+
+.form__input:hover + .form__icon {
+  color: #2196f3;
+}
+
+.form__text-area {
+  padding: 12px 16px;
+  height: 120px;
+  border: 1px solid #21212133;
+  border-radius: 4px;
+  resize: none;
+}
+
+.form__text-area::placeholder {
+  color: #75757580;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+}
+
+.checkbox-link {
+  color: #2196f3;
+}
+
+.form__button {
+  color: #fff;
+  border-radius: 4px;
+  width: 200px;
+  height: 50px;
+  background-color: #188ce8;
+  border: 1px solid #21212133;
+  cursor: pointer;
 }
