@@ -54,7 +54,7 @@
               >
               <a class="contacts__item link" href="tel:+380961111111">
                 <svg class="icon icon--phone contacts__icon">
-                  <use href="./images/sprite.svg#phone"></use>
+                  <use href="./images/sprite.svg#smartphone"></use>
                 </svg>
                 +38 096 111 11 11
               </a>
@@ -138,26 +138,35 @@
           <h2 class="activity__title">Чим ми займаємося</h2>
           <ul class="activity__list">
             <li class="activity__item">
-              <img
-                class="activity__img"
-                src="./images/feature-1.jpg"
-                alt="Feature"
-                title="Computers"
-              />
+              <div class="activity__img-container">
+                <img
+                  class="activity__img"
+                  src="./images/feature-1.jpg"
+                  alt="Feature"
+                  title="Computers"
+                />
+                <div class="activity__text">Десктопні додатки</div>
+              </div>
             </li>
             <li class="activity__item">
-              <img
-                class="activity__img"
-                src="./images/feature-2.jpg"
-                alt="Feature"
-              />
+              <div class="activity__img-container">
+                <img
+                  class="activity__img"
+                  src="./images/feature-2.jpg"
+                  alt="Feature"
+                />
+                <div class="activity__text">Мобільні додатки</div>
+              </div>
             </li>
             <li class="activity__item">
-              <img
-                class="activity__img"
-                src="./images/feature-3.jpg"
-                alt="Feature"
-              />
+              <div class="activity__img-container">
+                <img
+                  class="activity__img"
+                  src="./images/feature-3.jpg"
+                  alt="Feature"
+                />
+                <div class="activity__text">Дизайнерські рішення</div>
+              </div>
             </li>
           </ul>
         </div>
@@ -412,6 +421,24 @@
               </ul>
             </div>
           </div>
+          <div class="footer__subscribe subscribe">
+            <h3 class="subscribe__title">Підпишіться на розсилку</h3>
+            <form class="subscribe__form">
+              <input
+                class="subscribe__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
+              <button class="subscribe__button" type="button">
+                Підписатися
+                <svg class="subscribe__button-icon">
+                  <use href="./images/sprite.svg#tg"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
@@ -428,6 +455,20 @@
           <h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>
           <form class="form" action="#">
             <label class="form__item">
+              Ім'я
+              <input
+                class="form__input"
+                type="text"
+                name="text"
+                id="text"
+                required
+              />
+              <svg class="form__icon">
+                <use href="./images/sprite.svg#person" />
+              </svg>
+            </label>
+
+            <label class="form__item">
               Телефон
               <input
                 class="form__input"
@@ -436,6 +477,9 @@
                 id="phone"
                 required
               />
+              <svg class="form__icon">
+                <use href="./images/sprite.svg#phone" />
+              </svg>
             </label>
 
             <label class="form__item">
@@ -447,6 +491,9 @@
                 id="email"
                 required
               />
+              <svg class="form__icon">
+                <use href="./images/sprite.svg#emailBlack" />
+              </svg>
             </label>
 
             <label class="form__item form__item--textarea">
